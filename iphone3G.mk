@@ -112,6 +112,12 @@ PRODUCT_COPY_FILES += \
 	device/apple/iphone3G/prebuilt/init.rc:root/init.rc \
 	device/apple/iphone3G/prebuilt/initDroid.sh:root/initDroid.sh
 
+#GPIO and ALSA
+PRODUCT_COPY_FILES += \
+	$(LOCAL_DIR)gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	$(LOCAL_DIR)asound.conf:system/etc/asound.conf \
+	$(LOCAL_DIR)asound.state:system/etc/asound.state
+
 # kernel modules for recovery ramdisk
 #PRODUCT_COPY_FILES += \
 #    device/apple/iphone3G/j4fs.ko:recovery/root/lib/modules/j4fs.ko
